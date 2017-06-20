@@ -6,7 +6,7 @@
 
 同时开始尝试使用测试框架 mocha 断言库 should
 
-## 栈 stack.js
+## 栈 Stack.js
 
 ### new Stack(arguments)
 添加元素
@@ -23,3 +23,29 @@
 ### size()
 返回栈内的元素的个数
 
+### get()
+返回这个栈内私有数组的复制，主要是为了mocha测试使用。
+
+## 队列 Queue.js
+
+### new Queue(arguments)
+添加元素
+
+### enqueue(element(s))
+向队列尾部添加一个（或多个）新的项
+
+### dequeue()
+移除队列的第一项，并返回被移除的元素
+
+### front()
+返回队列的第一项，不改变队列
+
+### isEmpty()
+如果队列内没有任何元素，则返回true，否则，则返回false
+
+### size()
+返回队列包含的元素个数,与数组的length属性类似
+
+
+### get()
+返回这个栈内私有数组的复制，主要是为了mocha测试使用。
