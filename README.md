@@ -1,4 +1,7 @@
 # js_data_structure_algorithm
+
+![](https://travis-ci.org/Ali1213/js_data_structure_algorithm.svg?branch=master)
+
 仅供自己实践，用js模拟学习数据结构使用
 
 同时开始尝试使用测试框架 mocha 断言库 should
