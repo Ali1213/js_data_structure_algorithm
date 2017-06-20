@@ -1,0 +1,28 @@
+{
+  "name": "js_data_structure_algorithm",
+  "version": "1.0.0",
+  "description": "data structure \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Duse js to imitate data structure and algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ali1213/js_data_structure_algorithm.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "aliyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ali1213/js_data_structure_algorithm/issues"
+  },
+  "homepage": "https://github.com/Ali1213/js_data_structure_algorithm#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.0.0",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  }
+}
