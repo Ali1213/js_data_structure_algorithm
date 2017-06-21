@@ -30,6 +30,7 @@
 
 ### new Queue(arguments)
 添加元素
+如果元素为空，得到一个空队列
 
 ### enqueue(element(s))
 向队列尾部添加一个（或多个）新的项
