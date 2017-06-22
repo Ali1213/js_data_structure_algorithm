@@ -50,3 +50,31 @@
 
 ### get()
 返回这个栈内私有数组的复制，主要是为了mocha测试使用。
+
+## 链表 linkedList
+
+链表内每一个数据都有element 和 next，element表示的是当前元素，next指向的是下一个元素。
+
+### append(element)
+向链表尾部增加一个新的项
+
+### insert(position,element)
+向链表指定位置插入一个新的项
+
+### remove(element)
+从链表中移除一项
+
+### indexOf(element)
+返回元素在链表中的索引，如果没有，则返回 -1
+
+### removeAt(position)
+从链表的特定位置移除一项
+
+### isEmpty()
+如果链表中不含任意一项，则返回true;如果链表长度大于0则返回false
+
+### size()
+返回链表包含的元素个数，与数组的length属性类似
+
+### toString()
+由于列表项使用了Node类，就需要重写继承自JavaScript对象默认的toString方法，让其只输出元素的值
