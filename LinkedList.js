@@ -8,7 +8,7 @@ class LinkedList {
   }
 
   append(element) {
-    let node = this.Node(element);
+    let node = LinkedList.Node(element);
     let current;
     if (Object.is(this.head, null)) {
       this.head = node;
@@ -23,7 +23,7 @@ class LinkedList {
   }
 
   insert(position, element) {
-    let node = this.Node(element),
+    let node = LinkedList.Node(element),
       index = 0,
       prev,
       current = this.head;
@@ -82,6 +82,8 @@ class LinkedList {
       current = this.head;
     if (position === 0) {
       this.head = current.next;
+      this[length]--;
+      return;
     }
 
     while (index < position) {
