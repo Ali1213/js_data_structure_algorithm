@@ -15,15 +15,19 @@ class BinarySearchTree {
   }
 
   search(key) {
-    if (this.root.key === null) {
+    return BinarySearchTree.searchNode(this.root, key);
+  }
+
+  static searchNode(root, key) {
+    if (root === null) {
       return false;
     }
     if (root.key > key) {
-      return this.search(root.left, key);
+      return BinarySearchTree.searchNode(root.left, key);
     } else if (root.key === key) {
       return true;
     } else {
-      return this.search(root.right, key);
+      return BinarySearchTree.searchNode(root.right, key);
     }
   }
 
@@ -78,14 +82,14 @@ class BinarySearchTree {
         root = root.right;
         return root;
       }
-      if(root.right === null){
+      if (root.right === null) {
         root = root.left;
         return root;
       }
 
-      let auxKey = BinarySearchTree.extremumNode(root.right,'left');
+      let auxKey = BinarySearchTree.extremumNode(root.right, 'left');
       root.key = auxKey;
-      root.right = BinarySearchTree.removeNode(root.right,auxKey);
+      root.right = BinarySearchTree.removeNode(root.right, auxKey);
       return root;
     }
 
