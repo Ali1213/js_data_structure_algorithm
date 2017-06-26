@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js_data_structure_algorithm\BinarySearchTree.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js_data_structure_algorithm/</a> BinarySearchTree.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">49.23% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>32/65</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.82% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">49.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/65</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">142×</span>
+<span class="cline-any cline-yes">72×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">70×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">70×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+class BinarySearchTree {
+  constructor() {
+    this.root = BinarySearchTree.Node(null);
+  }
+&nbsp;
+  insert(key) {
+    let root = this.root,
+      node = BinarySearchTree.Node(key);
+    if (root.key === null) {
+      root.key = key;
+    } else {
+      BinarySearchTree.insertNode(root, node);
+    }
+  }
+&nbsp;
+  search(key) {
+    return BinarySearchTree.searchNode(this.root, key);
+  }
+&nbsp;
+  static searchNode(root, key) {
+    if (root === null) {
+      return false;
+    }
+    if (root.key &gt; key) {
+      return BinarySearchTree.searchNode(root.left, key);
+    } else if (root.key === key) {
+      return true;
+    } else {
+      return BinarySearchTree.searchNode(root.right, key);
+    }
+  }
+&nbsp;
+  inOrderTraverse(callback) {
+    BinarySearchTree.inOrderTraverseNode(this.root, callback);
+  }
+&nbsp;
+  preOrderTraverse(callback) {
+    BinarySearchTree.preOrderTraverseNode(this.root, callback);
+  }
+&nbsp;
+  postOrderTraverse<span class="fstat-no" title="function not covered" >(callback) {</span>
+<span class="cstat-no" title="statement not covered" >    BinarySearchTree.postOrderTraverseNode(this.root, callback);</span>
+  }
+&nbsp;
+  min<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    return BinarySearchTree.extremumNode(this.root, 'left');</span>
+  }
+&nbsp;
+  max<span class="fstat-no" title="function not covered" >() {</span>
+<span class="cstat-no" title="statement not covered" >    return BinarySearchTree.extremumNode(this.root, 'right');</span>
+  }
+&nbsp;
+  remove<span class="fstat-no" title="function not covered" >(key) {</span>
+<span class="cstat-no" title="statement not covered" >    this.root = BinarySearchTree.removeNode(this.root, key);</span>
+  }
+&nbsp;
+  static removeNode<span class="fstat-no" title="function not covered" >(root, key) {</span>
+<span class="cstat-no" title="statement not covered" >    if (root === null) {</span>
+<span class="cstat-no" title="statement not covered" >      return null;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (root.key &gt; key) {</span>
+<span class="cstat-no" title="statement not covered" >      root.left = BinarySearchTree.removeNode(root.left, key);</span>
+<span class="cstat-no" title="statement not covered" >      return root;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (root.key &lt; key) {</span>
+<span class="cstat-no" title="statement not covered" >      root.right = BinarySearchTree.removeNode(root.right, key);</span>
+<span class="cstat-no" title="statement not covered" >      return root;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (root.key === key) {</span>
+&nbsp;
+      //只有一个叶节点
+<span class="cstat-no" title="statement not covered" >      if (root.left === null &amp;&amp; root.right === null) {</span>
+<span class="cstat-no" title="statement not covered" >        return key;</span>
+      }
+&nbsp;
+      //只有
+<span class="cstat-no" title="statement not covered" >      if (root.left === null) {</span>
+<span class="cstat-no" title="statement not covered" >        root = root.right;</span>
+<span class="cstat-no" title="statement not covered" >        return root;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (root.right === null) {</span>
+<span class="cstat-no" title="statement not covered" >        root = root.left;</span>
+<span class="cstat-no" title="statement not covered" >        return root;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      let auxKey = BinarySearchTree.extremumNode(root.right, 'left');</span>
+<span class="cstat-no" title="statement not covered" >      root.key = auxKey;</span>
+<span class="cstat-no" title="statement not covered" >      root.right = BinarySearchTree.removeNode(root.right, auxKey);</span>
+<span class="cstat-no" title="statement not covered" >      return root;</span>
+    }
+&nbsp;
+  }
+&nbsp;
+  static extremumNode<span class="fstat-no" title="function not covered" >(node, direction) {</span>
+<span class="cstat-no" title="statement not covered" >    if (node !== null) {</span>
+<span class="cstat-no" title="statement not covered" >      if (node[direction]) {</span>
+<span class="cstat-no" title="statement not covered" >        BinarySearchTree.minNode(node[direction]);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        return node.key;</span>
+      }
+    }
+  }
+&nbsp;
+  static postOrderTraverseNode<span class="fstat-no" title="function not covered" >(root, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    if (root !== null) {</span>
+<span class="cstat-no" title="statement not covered" >      BinarySearchTree.postOrderTraverseNode(root.left, callback);</span>
+<span class="cstat-no" title="statement not covered" >      BinarySearchTree.postOrderTraverseNode(root.right, callback);</span>
+<span class="cstat-no" title="statement not covered" >      callback(root.key);</span>
+    }
+  }
+&nbsp;
+  static preOrderTraverseNode(root, callback) {
+    if (root !== null) {
+      callback(root.key);
+      BinarySearchTree.preOrderTraverseNode(root.left, callback);
+      BinarySearchTree.preOrderTraverseNode(root.right, callback);
+    }
+  }
+&nbsp;
+  static inOrderTraverseNode(root, callback) {
+    if (root !== null) {
+      BinarySearchTree.inOrderTraverseNode(root.left, callback);
+      callback(root.key);
+      BinarySearchTree.inOrderTraverseNode(root.right, callback);
+    }
+  }
+&nbsp;
+  static insertNode(root, node) {
+    if (root.key &gt; node.key) {
+      if (root.left === null) {
+        root.left = node;
+      } else {
+        BinarySearchTree.insertNode(root.left, node);
+      }
+    } else {
+      if (root.right === null) {
+        root.right = node;
+      } else {
+        BinarySearchTree.insertNode(root.right, node);
+      }
+    }
+  }
+&nbsp;
+  static Node(key) {
+    return {
+      key,
+      left: null,
+      right: null
+    };
+  }
+}
+&nbsp;
+module.exports = BinarySearchTree;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 26 2017 17:20:59 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

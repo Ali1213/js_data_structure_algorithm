@@ -4,7 +4,7 @@
   "description": "data structure \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Duse js to imitate data structure and algorithm",
   "main": "index.js",
   "scripts": {
-    "report-coverage": "codecov",
+    "codecov": "codecov",
     "test": "mocha"
   },
   "repository": {

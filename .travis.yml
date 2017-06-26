@@ -1,8 +1,12 @@
 language: node_js
 
 node_js:
- - '7.9.0'
+  - '7.9.0'
 
-script: 
- - npm test
- - npm run codecov
+env:  
+  global:
+    - CODECOV_TOKEN: cedb81f1-8483-4bd6-bbf5-4b49b01bc768
+
+script:  
+  - npm test
+  - istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec ./node_modules/.bin/codecov
