@@ -1,6 +1,5 @@
 # js_data_structure_algorithm
-
-![](https://travis-ci.org/Ali1213/js_data_structure_algorithm.svg?branch=master)
+[![Build Status](https://travis-ci.org/Ali1213/js_data_structure_algorithm.svg?branch=master)](https://travis-ci.org/Ali1213/js_data_structure_algorithm)
 [![coverage](https://codecov.io/gh/Ali1213/js_data_structure_algorithm/branch/master/graph/badge.svg)](https://codecov.io/gh/Ali1213/js_data_structure_algorithm)
 
 仅供自己实践，用js模拟学习数据结构使用
