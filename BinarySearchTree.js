@@ -56,9 +56,9 @@ class BinarySearchTree {
   }
 
   static removeNode(root, key) {
-    if (root === null) {
-      return null;
-    }
+    // if (root === null) {
+    //   return null;
+    // }
 
     if (root.key > key) {
       root.left = BinarySearchTree.removeNode(root.left, key);
@@ -74,7 +74,8 @@ class BinarySearchTree {
 
       //只有一个叶节点
       if (root.left === null && root.right === null) {
-        return key;
+        root = null;
+        return root;
       }
 
       //只有
@@ -98,7 +99,7 @@ class BinarySearchTree {
   static extremumNode(node, direction) {
     if (node !== null) {
       if (node[direction]) {
-        BinarySearchTree.minNode(node[direction]);
+        return BinarySearchTree.extremumNode(node[direction],direction);
       } else {
         return node.key;
       }

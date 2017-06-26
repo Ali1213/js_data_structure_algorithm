@@ -5,8 +5,8 @@ describe('test/BinarySearchTree-test.js', function () {
 
   let tree;
 
-  beforeEach(function () {
-    tree = new BinarySearchTree();
+  const createTree = function () {
+    let tree = new BinarySearchTree();
     tree.insert(11);
     tree.insert(7);
     tree.insert(15);
@@ -22,6 +22,11 @@ describe('test/BinarySearchTree-test.js', function () {
     tree.insert(18);
     tree.insert(25);
     tree.insert(6);
+    return tree;
+  };
+
+  beforeEach(function () {
+    tree = createTree();
   });
 
   it('should insert the key when insert()', function () {
@@ -68,4 +73,54 @@ describe('test/BinarySearchTree-test.js', function () {
 
     keyArr.should.deepEqual([11, 7, 5, 3, 6, 9, 8, 10, 15, 13, 12, 14, 20, 18, 25]);
   });
+
+  it('should traverse the node in order when postOrderTraverse()', function () {
+    let keyArr = [];
+    let cb = function (key) {
+      keyArr.push(key);
+    };
+    tree.postOrderTraverse(cb);
+
+    keyArr.should.deepEqual([3, 6, 5, 8, 10, 9, 7, 12, 14, 13, 18, 25, 20, 15, 11]);
+  });
+
+  it('should get the min value in tree when min()', function () {
+    should.equal(tree.min(), 3);
+    should.equal(new BinarySearchTree().min(), null);
+  });
+
+  it('should get the max value in tree when max()', function () {
+    should.equal(tree.max(), 25);
+    should.equal(new BinarySearchTree().max(), null);
+  });
+
+  it('should remove the key when remove()', function () {
+    tree.remove(6);
+    let keyArr = [];
+    let cb = function (key) {
+      keyArr.push(key);
+    };
+    tree.preOrderTraverse(cb);
+    keyArr.should.deepEqual([11, 7, 5, 3, 9, 8, 10, 15, 13, 12, 14, 20, 18, 25]);
+
+    tree.remove(5);
+    keyArr = [];
+    tree.preOrderTraverse(cb);
+    keyArr.should.deepEqual([11, 7, 3, 9, 8, 10, 15, 13, 12, 14, 20, 18, 25]);
+
+
+    tree.remove(15);
+    keyArr = [];
+    tree.preOrderTraverse(cb);
+    keyArr.should.deepEqual([11, 7, 3, 9, 8, 10, 18, 13, 12, 14, 20, 25]);
+
+    tree.remove(8);
+    tree.remove(9);
+    keyArr = [];
+    tree.preOrderTraverse(cb);
+    keyArr.should.deepEqual([11, 7, 3, 10, 18, 13, 12, 14, 20, 25]);
+
+
+  });
+
 });
