@@ -135,3 +135,22 @@ Es6已经自带Map。就不模仿了。
 
 ### remove(key)
 从树中移除某个键
+
+## Graph 图表
+
+### addVertex(point)
+
+增加顶点
+
+### addEdge(point,sidePoint)
+
+增加该顶点的相连的其他点
+
+### toString()
+
+返回一个字符串，用邻接矩阵形式表示表的结构;
+
+### bfs()
+
+广度优先搜索
+
