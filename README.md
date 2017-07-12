@@ -105,7 +105,6 @@ Es6已经自带set。就不模仿了。
 ## Map 字典
 
 Es6已经自带Map。就不模仿了。
- 
 
 ## BinarySearchTree 二叉搜索树
 
@@ -153,4 +152,13 @@ Es6已经自带Map。就不模仿了。
 ### bfs()
 
 广度优先搜索
+
+### getVertices();
+
+获取顶点列表
+
+### getAdjList(v);
+
+获取连接顶点v的顶点
+
 

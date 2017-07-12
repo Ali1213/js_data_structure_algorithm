@@ -10,20 +10,29 @@ class Graph {
     this[adjList] = new Map();
   }
 
+  getVertices() {
+    return [...this[vertices]];
+  }
+
+  getAdjList(v) {
+    return [...this[adjList].get(v)];
+  }
+
   addVertex(x) {
     this[vertices].push(x);
-    this[adjList].push(x, []);
+    this[adjList].set(x, []);
   }
 
   addEdge(v, w) {
     this[adjList].get(v).push(w);
+    this[adjList].get(w).push(v);
   }
 
   toString() {
     let s = '';
     for (let i = 0; i < this[vertices].length; i++) {
       s += this[vertices][i] + ' -> ';
-      s += adjList.get(this[vertices][i]).join(' ') + '\n';
+      s += this[adjList].get(this[vertices][i]).join(' ') + '\n';
     }
     return s;
   }
@@ -68,7 +77,7 @@ class Graph {
     while (!queue.isEmpty()) {
       let u = queue.dequeue(),
         neighbors = this[adjList].get(u);
-
+        
       color[u] = 'grey';
       neighbors.forEach((item) => {
         if (color[item] == 'white') {
@@ -133,4 +142,4 @@ class Graph {
 
 }
 
-module.export = Graph;
+module.exports = Graph;
