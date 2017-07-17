@@ -43,6 +43,37 @@ const insertSort = function (arr) {
   return arr;
 };
 
+const mergeSort = function (arr) {
+  let len = arr.length;
+  if (len === 1) {
+    return arr;
+  }
+
+  let mid = Math.floor(len / 2),
+    lArr = arr.slice(0, mid),
+    rArr = arr.slice(mid, len);
+
+  return merge(mergeSort(lArr), mergeSort(rArr));
+
+};
+
+const merge = function (left, right) {
+  let i = 0, j = 0, result = [];
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.push(left[i++]);
+    } else {
+      result.push(right[j++]);
+    }
+  }
+  while (i < left.length) {
+    result.push(left[i++]);
+  }
+  while (j < right.length) {
+    result.push(right[j++]);
+  }
+  return result;
+};
 
 const quick = function (arr, left, right) {
   let index;
@@ -95,5 +126,6 @@ module.exports = {
   bubbleSort,
   selectionSort,
   insertSort,
-  quickSort
+  quickSort,
+  mergeSort
 };

@@ -16,6 +16,10 @@ describe('test/sort-test.js', function () {
     sort.selectionSort(arr).should.deepEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
+  it('should sort when mergeSort', function () {
+    sort.mergeSort(arr).should.deepEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  });
+
   it('should sort when insertSort', function () {
     sort.insertSort(arr).should.deepEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
