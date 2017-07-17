@@ -35,7 +35,7 @@ const insertSort = function (arr) {
     j = i;
     temp = arr[i];
     while (j > 0 && arr[j - 1] > temp) {
-      arr[j] = arr[j-1];
+      arr[j] = arr[j - 1];
       j--;
     }
     arr[j] = temp;
@@ -44,8 +44,56 @@ const insertSort = function (arr) {
 };
 
 
+const quick = function (arr, left, right) {
+  let index;
+  if (arr.length > 1) {
+    index = partition(arr, left, right);
+
+    if (left < index - 1) {
+      quick(arr, left, index - 1);
+    }
+
+    if (index < right) {
+      quick(arr, index, right);
+    }
+  }
+};
+
+const partition = function (arr, left, right) {
+  let point = arr[Math.floor((right + left) / 2)],
+    i = left,
+    j = right;
+
+  while (i <= j) {
+
+    while (arr[i] < point) {
+      i++;
+    }
+
+    while (arr[j] > point) {
+      j--;
+    }
+
+    if (i <= j) {
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+      i++;
+      j--;
+    }
+  }
+  return i;
+};
+
+const quickSort = function (arr) {
+  quick(arr, 0, arr.length - 1);
+  return arr;
+};
+
+
+
+
 module.exports = {
   bubbleSort,
   selectionSort,
-  insertSort
+  insertSort,
+  quickSort
 };
